@@ -1,4 +1,4 @@
-import { AlertTriangle, ArrowRight, BookOpenCheck, Brain, ClipboardCheck, Sparkles } from 'lucide-react';
+import { AlertTriangle, ArrowRight, BookOpenCheck, Brain, ClipboardCheck } from 'lucide-react';
 import { useEffect, useMemo, useState } from 'react';
 import { colorThemes } from './components/ColorThemeSelect.jsx';
 import GuidedExerciseSet from './components/GuidedExerciseSet.jsx';
@@ -45,10 +45,6 @@ function Home({ onGoTo }) {
     <div className="space-y-8">
       <section className="grid items-center gap-8 rounded-lg border border-white/70 bg-white/80 p-5 shadow-soft dark:border-slate-800 dark:bg-slate-900/90 lg:grid-cols-[1fr_0.86fr] lg:p-8">
         <div className="max-w-2xl">
-          <div className="mb-4 inline-flex items-center gap-2 rounded-lg border border-teal-200 bg-teal-50 px-3 py-2 text-sm font-bold text-teal-800 dark:border-teal-900 dark:bg-teal-950/60 dark:text-teal-200">
-            <Sparkles className="h-4 w-4" />
-            Quiz date: June 16th
-          </div>
           <h1 className="text-balance text-4xl font-black leading-tight text-slate-950 dark:text-white sm:text-5xl">
             English Study Portal
           </h1>

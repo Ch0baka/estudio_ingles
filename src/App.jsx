@@ -1,5 +1,6 @@
 import { AlertTriangle, ArrowRight, BookOpenCheck, Brain, ClipboardCheck, Sparkles } from 'lucide-react';
 import { useEffect, useMemo, useState } from 'react';
+import { colorThemes } from './components/ColorThemeSelect.jsx';
 import GuidedExerciseSet from './components/GuidedExerciseSet.jsx';
 import Header from './components/Header.jsx';
 import StudyCollectionPicker from './components/StudyCollectionPicker.jsx';
@@ -213,6 +214,10 @@ export default function App() {
   const [activeTheoryCollection, setActiveTheoryCollection] = useState('modal-verbs');
   const [activeExerciseCollection, setActiveExerciseCollection] = useState('modal-practice');
   const [isDark, setIsDark] = useState(() => localStorage.getItem('theme') === 'dark');
+  const [accentTheme, setAccentTheme] = useState(() => {
+    const savedTheme = localStorage.getItem('accentTheme');
+    return colorThemes.some((theme) => theme.id === savedTheme) ? savedTheme : 'teal';
+  });
 
   const navigateTo = (tab, collectionId) => {
     setActiveTab(tab);
@@ -228,6 +233,11 @@ export default function App() {
     document.documentElement.classList.toggle('dark', isDark);
     localStorage.setItem('theme', isDark ? 'dark' : 'light');
   }, [isDark]);
+
+  useEffect(() => {
+    document.documentElement.dataset.accent = accentTheme;
+    localStorage.setItem('accentTheme', accentTheme);
+  }, [accentTheme]);
 
   const currentView = useMemo(() => {
     if (activeTab === 'Theory & Examples') {
@@ -245,7 +255,12 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-[radial-gradient(circle_at_top_left,_rgba(20,184,166,0.22),_transparent_34%),linear-gradient(135deg,_#f6fcff_0%,_#eef8fb_46%,_#fff7ed_100%)] text-slate-950 transition-colors dark:bg-[radial-gradient(circle_at_top_left,_rgba(45,212,191,0.18),_transparent_30%),linear-gradient(135deg,_#020617_0%,_#082f49_54%,_#1f2937_100%)] dark:text-white">
-      <Header isDark={isDark} onToggleTheme={() => setIsDark((value) => !value)} />
+      <Header
+        accentTheme={accentTheme}
+        isDark={isDark}
+        onAccentThemeChange={setAccentTheme}
+        onToggleTheme={() => setIsDark((value) => !value)}
+      />
       <Tabs tabs={tabs} activeTab={activeTab} onChange={setActiveTab} />
       <main className="mx-auto w-full max-w-6xl px-4 py-8 sm:px-6 lg:px-8">{currentView}</main>
     </div>

@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "lint": "node scripts/validate-content.mjs",
     "preview": "vite preview",
+    "test": "node scripts/validate-content.mjs",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {

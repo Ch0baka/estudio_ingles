@@ -1,7 +1,7 @@
 import ExerciseCard from './ExerciseCard.jsx';
 
 export default function ExerciseSection({ group }) {
-  const groupId = group.title.toLowerCase().replace(/\s+/g, '-');
+  const groupId = group.id || group.title.toLowerCase().replace(/\s+/g, '-');
 
   return (
     <section className="space-y-4">

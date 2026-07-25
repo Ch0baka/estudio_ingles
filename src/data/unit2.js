@@ -1,8 +1,8 @@
 export const unitTwoObjectives = [
-  'Identify the people or things that pronouns refer to in a text.',
-  'Recognize a passage’s main idea and supporting details.',
-  'Use can, could, and should accurately in context.',
-  'Recognize and use common collocations about habits and goals.',
+  'Aprender a descubrir a quién o a qué se refiere un pronombre dentro de una lectura.',
+  'Encontrar la idea principal de un texto y separar los detalles que la apoyan.',
+  'Usar can, could y should en situaciones simples, como habilidad, petición y consejo.',
+  'Reconocer combinaciones naturales de palabras sobre hábitos, metas y rutinas.',
 ];
 
 export const pronounRows = [
@@ -53,17 +53,17 @@ export const pronounRows = [
 export const modalReview = [
   {
     title: 'Can',
-    uses: ['Present ability.', 'Informal request.'],
+    uses: ['Habilidad en el presente.', 'Petición informal o cercana.'],
     examples: ['I can keep a food journal.', 'Can you help me set a goal?'],
   },
   {
     title: 'Could',
-    uses: ['Past ability.', 'Possibility.', 'Polite request.'],
+    uses: ['Habilidad en el pasado.', 'Posibilidad.', 'Petición amable o más educada.'],
     examples: ['She could run farther last year.', 'Could you explain this habit?'],
   },
   {
     title: 'Should',
-    uses: ['Advice or recommendation.'],
+    uses: ['Consejo o recomendación.'],
     examples: ['You should cut down on sugar.', 'You shouldn’t spend so much time playing video games.'],
   },
 ];
@@ -94,9 +94,9 @@ export const collocationExamples = [
 
 export const readingPractice = {
   text: 'Lucas wants to build a healthier routine. He sets a simple goal: walk for twenty minutes after work. His sister Ana joins him twice a week because she wants to improve her habits too. They track their progress in a notebook. It helps them pay attention to small changes. After a month, the routine feels easier, and the progress is theirs.',
-  mainIdea: 'Lucas and Ana use a simple, trackable routine to build healthier habits.',
+  mainIdea: 'Lucas y Ana usan una rutina simple y fácil de registrar para crear hábitos más saludables.',
   strategy:
-    'First find the nearest noun that matches the pronoun in number and meaning. Then reread the complete sentence to confirm the reference.',
+    'Primero busca el sustantivo más cercano que coincida con el pronombre en número y significado. Luego vuelve a leer la oración completa para confirmar la referencia.',
   references: [
     { pronoun: 'He', reference: 'Lucas' },
     { pronoun: 'him', reference: 'Lucas' },
@@ -110,21 +110,21 @@ export const readingPractice = {
 export const theoryCollections = [
   {
     id: 'modal-verbs',
-    title: 'Modal verbs & obligations',
-    eyebrow: 'Previous study',
-    description: 'Review advice, rules, obligation, prohibition, and absence of necessity.',
+    title: 'Verbos modales y obligaciones',
+    eyebrow: 'Estudio anterior',
+    description: 'Repasa consejos, reglas, obligaciones, prohibiciones y cosas que no son necesarias.',
   },
   {
     id: 'unit-2',
-    title: 'Pronouns, habits & goals',
-    eyebrow: 'New study · Unit 2',
-    description: 'Identify pronoun references, understand a short passage, use modal verbs, and build natural collocations.',
+    title: 'Pronombres, hábitos y metas',
+    eyebrow: 'Nuevo estudio · Unit 2',
+    description: 'Aprende referencias de pronombres, comprende una lectura breve y usa expresiones naturales sobre hábitos y metas.',
     objectives: unitTwoObjectives,
   },
   {
     id: 'vocabulary-studio',
-    title: 'Vocabulary studio',
-    eyebrow: 'Growing collection',
-    description: 'One growing collection of useful words, collocations, reading terms, and habit expressions.',
+    title: 'Estudio de vocabulario',
+    eyebrow: 'Colección de vocabulario',
+    description: 'Una colección para practicar palabras, expresiones, lectura, hábitos y metas.',
   },
 ];

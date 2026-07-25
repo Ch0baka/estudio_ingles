@@ -50,6 +50,7 @@ assert(duplicateTerms.length === 0, `Duplicate vocabulary terms: ${duplicateTerm
 vocabulary.forEach((word) => {
   assert(word.term, 'Vocabulary item missing term.');
   assert(word.translation || word.spanish, `Vocabulary item ${word.term} missing Spanish translation.`);
+  assert(word.spanishMeaning, `Vocabulary item ${word.term} missing Spanish definition.`);
   assert(word.meaning, `Vocabulary item ${word.term} missing English definition.`);
   assert(word.example, `Vocabulary item ${word.term} missing example.`);
 });

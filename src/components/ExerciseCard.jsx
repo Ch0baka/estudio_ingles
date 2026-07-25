@@ -64,16 +64,16 @@ export default function ExerciseCard({ exercise, groupId, index }) {
           className="inline-flex min-h-11 items-center gap-2 rounded-lg bg-teal-600 px-4 py-2 text-sm font-bold text-white shadow-lg shadow-teal-900/15 transition hover:-translate-y-0.5 hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 disabled:cursor-not-allowed disabled:bg-slate-300 disabled:text-slate-600 disabled:shadow-none dark:bg-teal-400 dark:text-slate-950 dark:hover:bg-teal-300 dark:focus:ring-offset-slate-950 dark:disabled:bg-slate-700 dark:disabled:text-slate-400"
         >
           <Check className="h-4 w-4" />
-          Check
+          Revisar
         </button>
       </div>
 
       <div className={`mt-4 rounded-lg border p-4 text-sm leading-6 ${feedbackStyles[result]}`}>
         <div className="mb-1 flex items-center gap-2 font-bold">
           <ResultIcon className="h-4 w-4" />
-          {result === 'idle' && 'Select an option and check your answer'}
-          {result === 'correct' && 'Correct'}
-          {result === 'incorrect' && 'Incorrect'}
+          {result === 'idle' && 'Elige una opción y revisa tu respuesta'}
+          {result === 'correct' && 'Correcto'}
+          {result === 'incorrect' && 'Incorrecto'}
         </div>
         {result !== 'idle' && <p>{exercise.explanation}</p>}
       </div>

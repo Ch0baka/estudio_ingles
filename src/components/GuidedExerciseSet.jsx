@@ -29,14 +29,14 @@ export default function GuidedExerciseSet({ exercises }) {
       <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <div>
           <p className="text-sm font-bold uppercase tracking-[0.14em] text-teal-700 dark:text-teal-300">
-            Question {currentIndex + 1} of {exercises.length}
+            Pregunta {currentIndex + 1} de {exercises.length}
           </p>
           <h2 className="mt-2 text-2xl font-black text-slate-950 dark:text-white">
-            Pronouns, collocations & reading
+            Pronombres, combinaciones y lectura
           </h2>
         </div>
         <div className="rounded-lg bg-slate-100 px-4 py-3 text-sm font-bold text-slate-700 dark:bg-slate-950/70 dark:text-slate-200">
-          {answeredCount}/{exercises.length} answered · {correctCount} correct
+          {answeredCount}/{exercises.length} respondidas · {correctCount} correctas
         </div>
       </div>
 
@@ -81,7 +81,7 @@ export default function GuidedExerciseSet({ exercises }) {
           >
             <div className="mb-1 flex items-center gap-2 font-black">
               {result ? <CheckCircle2 className="h-4 w-4" /> : <XCircle className="h-4 w-4" />}
-              {result ? 'Correct' : 'Incorrect'}
+              {result ? 'Correcto' : 'Incorrecto'}
             </div>
             <p>{currentExercise.explanation}</p>
           </div>
@@ -96,7 +96,7 @@ export default function GuidedExerciseSet({ exercises }) {
           className="inline-flex min-h-11 items-center justify-center gap-2 rounded-lg border border-slate-200 bg-white px-4 py-2 text-sm font-bold text-slate-800 transition hover:-translate-y-0.5 hover:border-teal-300 hover:bg-teal-50 disabled:cursor-not-allowed disabled:opacity-50 dark:border-slate-700 dark:bg-slate-950/55 dark:text-slate-100 dark:hover:border-teal-700 dark:hover:bg-slate-900"
         >
           <ArrowLeft className="h-4 w-4" />
-          Previous
+          Anterior
         </button>
 
         <button
@@ -105,17 +105,17 @@ export default function GuidedExerciseSet({ exercises }) {
           disabled={currentIndex === exercises.length - 1}
           className="inline-flex min-h-11 items-center justify-center gap-2 rounded-lg bg-teal-600 px-4 py-2 text-sm font-bold text-white shadow-lg shadow-teal-900/15 transition hover:-translate-y-0.5 hover:bg-teal-700 disabled:cursor-not-allowed disabled:bg-slate-300 disabled:text-slate-600 disabled:shadow-none dark:bg-teal-400 dark:text-slate-950 dark:hover:bg-teal-300 dark:disabled:bg-slate-700 dark:disabled:text-slate-400"
         >
-          Next
+          Siguiente
           <ArrowRight className="h-4 w-4" />
         </button>
       </div>
 
       {isComplete && (
         <div className="mt-6 rounded-lg border border-teal-200 bg-teal-50 p-5 text-teal-950 dark:border-teal-900 dark:bg-teal-950/45 dark:text-teal-100">
-          <h3 className="text-lg font-black">Final result</h3>
+          <h3 className="text-lg font-black">Resultado final</h3>
           <p className="mt-2 leading-7">
-            You answered {correctCount} of {exercises.length} correctly. Review any incorrect cards and repeat the set
-            when you want another pass.
+            Respondiste {correctCount} de {exercises.length} correctamente. Revisa las tarjetas incorrectas y repite el
+            set cuando quieras practicar otra vez.
           </p>
           <button
             type="button"
@@ -123,7 +123,7 @@ export default function GuidedExerciseSet({ exercises }) {
             className="mt-4 inline-flex min-h-11 items-center gap-2 rounded-lg bg-teal-600 px-4 py-2 text-sm font-bold text-white transition hover:-translate-y-0.5 hover:bg-teal-700 dark:bg-teal-400 dark:text-slate-950 dark:hover:bg-teal-300"
           >
             <RotateCcw className="h-4 w-4" />
-            Repeat set
+            Repetir set
           </button>
         </div>
       )}

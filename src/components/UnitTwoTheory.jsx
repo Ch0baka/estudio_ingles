@@ -25,7 +25,11 @@ function InfoBlock({ icon: Icon, title, children }) {
 export default function UnitTwoTheory() {
   return (
     <div className="space-y-5">
-      <InfoBlock icon={Goal} title="Unit goals">
+      <InfoBlock icon={Goal} title="Objetivos de la unidad">
+        <p className="mb-4 leading-7 text-slate-600 dark:text-slate-300">
+          Estos objetivos te muestran qué deberías poder hacer al terminar la unidad. No tienes que aprender todo de
+          memoria: practica mirando ejemplos, comparando frases y volviendo a revisar lo que todavía cueste.
+        </p>
         <ul className="grid gap-3 sm:grid-cols-2">
           {unitTwoObjectives.map((objective) => (
             <li
@@ -38,15 +42,19 @@ export default function UnitTwoTheory() {
         </ul>
       </InfoBlock>
 
-      <InfoBlock icon={Table2} title="Pronouns">
+      <InfoBlock icon={Table2} title="Pronombres">
+        <p className="mb-4 leading-7 text-slate-600 dark:text-slate-300">
+          Los pronombres reemplazan nombres para no repetirlos. Primero mira de quién se habla y luego revisa si el
+          pronombre hace la acción, recibe la acción o muestra posesión.
+        </p>
         <div className="overflow-x-auto rounded-lg border border-slate-200 dark:border-slate-700">
           <table className="min-w-[680px] w-full divide-y divide-slate-200 text-left text-sm dark:divide-slate-700">
             <thead className="bg-slate-100 text-slate-700 dark:bg-slate-950 dark:text-slate-200">
               <tr>
-                <th className="px-4 py-3 font-black">Subject pronoun</th>
-                <th className="px-4 py-3 font-black">Object pronoun</th>
-                <th className="px-4 py-3 font-black">Possessive adjective</th>
-                <th className="px-4 py-3 font-black">Possessive pronoun</th>
+                <th className="px-4 py-3 font-black">Pronombre sujeto</th>
+                <th className="px-4 py-3 font-black">Pronombre objeto</th>
+                <th className="px-4 py-3 font-black">Adjetivo posesivo</th>
+                <th className="px-4 py-3 font-black">Pronombre posesivo</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-slate-200 bg-white dark:divide-slate-800 dark:bg-slate-950/45">
@@ -64,10 +72,10 @@ export default function UnitTwoTheory() {
 
         <div className="mt-4 grid gap-3 sm:grid-cols-2">
           {[
-            'Subject pronouns perform the action.',
-            'Object pronouns receive the action.',
-            'Possessive adjectives appear before a noun.',
-            'Possessive pronouns replace the noun.',
+            'Los pronombres sujeto hacen la acción: I study, she walks, they practice.',
+            'Los pronombres objeto reciben la acción: help me, call him, listen to us.',
+            'Los adjetivos posesivos van antes de un sustantivo: my book, her routine, their goal.',
+            'Los pronombres posesivos reemplazan el sustantivo completo: mine, hers, ours, theirs.',
           ].map((rule) => (
             <p
               key={rule}
@@ -81,13 +89,17 @@ export default function UnitTwoTheory() {
         <div className="mt-4 flex gap-3 rounded-lg bg-amber-50 p-4 text-sm leading-6 text-amber-950 dark:bg-amber-950/35 dark:text-amber-100">
           <Lightbulb className="mt-0.5 h-4 w-4 shrink-0" />
           <p>
-            Standard English has no independent possessive pronoun “its”. Use “its” only before a noun: “The dog
-            finished its food.”
+            En inglés estándar, “its” se usa antes de un sustantivo, como en “The dog finished its food”. No se usa
+            como pronombre posesivo independiente.
           </p>
         </div>
       </InfoBlock>
 
-      <InfoBlock icon={MessageCircle} title="Can, could and should">
+      <InfoBlock icon={MessageCircle} title="Can, could y should">
+        <p className="mb-4 leading-7 text-slate-600 dark:text-slate-300">
+          Estos modales ayudan a hablar de habilidades, peticiones y consejos. Fíjate en la intención de la frase antes
+          de elegir.
+        </p>
         <div className="grid gap-4 md:grid-cols-3">
           {modalReview.map((modal) => (
             <article key={modal.title} className="rounded-lg border border-slate-200 bg-slate-50 p-4 dark:border-slate-700 dark:bg-slate-950/55">
@@ -109,9 +121,10 @@ export default function UnitTwoTheory() {
         </div>
       </InfoBlock>
 
-      <InfoBlock icon={ListChecks} title="Collocations">
+      <InfoBlock icon={ListChecks} title="Combinaciones frecuentes">
         <p className="leading-7 text-slate-600 dark:text-slate-300">
-          A collocation is a combination of words that is used naturally and frequently.
+          Una collocation es una combinación de palabras que los hablantes usan de forma natural. Aprenderlas como
+          “bloques” te ayuda a sonar más claro y a entender mejor las lecturas.
         </p>
         <div className="mt-4 flex flex-wrap gap-2">
           {habitCollocations.map((collocation) => (
@@ -140,12 +153,16 @@ export default function UnitTwoTheory() {
         </div>
       </InfoBlock>
 
-      <InfoBlock icon={BookOpenText} title="Reading comprehension">
+      <InfoBlock icon={BookOpenText} title="Comprensión lectora">
+        <p className="mb-4 leading-7 text-slate-600 dark:text-slate-300">
+          Lee el texto completo una vez para entender la idea general. Después vuelve a las palabras clave para responder
+          preguntas de detalle.
+        </p>
         <p className="rounded-lg bg-slate-50 p-4 leading-8 text-slate-700 dark:bg-slate-950/55 dark:text-slate-300">
           {readingPractice.text}
         </p>
         <div className="mt-4 rounded-lg bg-teal-50 p-4 text-sm leading-6 text-teal-950 dark:bg-teal-950/45 dark:text-teal-100">
-          <strong>Main idea:</strong> {readingPractice.mainIdea}
+          <strong>Idea principal:</strong> {readingPractice.mainIdea}
         </div>
         <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {readingPractice.references.map((item) => (

@@ -13,7 +13,7 @@ export const theorySections = [
         spanish: 'No deberías excederte con el ejercicio.',
       },
     ],
-    note: 'Should sounds softer than must because it is advice, not a strict obligation.',
+    note: 'Should suena más suave que must, porque entrega un consejo y no una obligación estricta.',
   },
   {
     title: 'Must / Mustn’t',
@@ -29,7 +29,7 @@ export const theorySections = [
         spanish: 'No debes correr en el hospital. Está prohibido.',
       },
     ],
-    note: 'Mustn’t never means “not necessary”; it means the action is not allowed.',
+    note: 'Mustn’t nunca significa “no es necesario”; significa que la acción no está permitida.',
   },
   {
     title: 'Have to / Don’t have to',
@@ -45,7 +45,7 @@ export const theorySections = [
         spanish: 'No tienes que traer comida. No es necesario.',
       },
     ],
-    note: 'Don’t have to gives permission not to do something.',
+    note: 'Don’t have to indica que puedes no hacer algo, porque no es necesario.',
   },
   {
     title: 'Has to / Doesn’t have to',
@@ -61,7 +61,7 @@ export const theorySections = [
         spanish: 'Él no tiene que llamarla al trabajo.',
       },
     ],
-    note: 'For third person singular, change have to to has to and don’t have to to doesn’t have to.',
+    note: 'Con he, she o it, cambia have to por has to y don’t have to por doesn’t have to.',
   },
   {
     title: 'Must vs Have To',
@@ -77,7 +77,7 @@ export const theorySections = [
         spanish: 'Tengo que descansar por dos semanas.',
       },
     ],
-    note: 'The meaning can be similar, but the source of the obligation changes.',
+    note: 'El significado puede parecer parecido, pero cambia de dónde viene la obligación.',
   },
   {
     title: 'Mustn’t vs Don’t Have To',
@@ -93,6 +93,6 @@ export const theorySections = [
         spanish: 'No tienes que esperar aquí. No es necesario.',
       },
     ],
-    note: 'This is the key contrast for the quiz: prohibition is different from no necessity.',
+    note: 'Esta diferencia es muy importante: una prohibición no es lo mismo que algo innecesario.',
   },
 ];

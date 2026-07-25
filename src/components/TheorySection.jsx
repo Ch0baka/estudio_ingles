@@ -17,7 +17,7 @@ export default function TheorySection({ section }) {
         <div className="rounded-lg border border-slate-200 bg-slate-50 p-4 dark:border-slate-700 dark:bg-slate-950/60">
           <div className="mb-2 flex items-center gap-2 text-sm font-bold text-slate-900 dark:text-slate-100">
             <ListChecks className="h-4 w-4 text-teal-600 dark:text-teal-300" />
-            Grammar structure
+            Estructura de la frase
           </div>
           <p className="text-sm font-semibold text-teal-800 dark:text-teal-200">{section.structure}</p>
         </div>
@@ -25,7 +25,7 @@ export default function TheorySection({ section }) {
         <div className="rounded-lg border border-slate-200 bg-slate-50 p-4 dark:border-slate-700 dark:bg-slate-950/60">
           <div className="mb-3 flex items-center gap-2 text-sm font-bold text-slate-900 dark:text-slate-100">
             <MessageCircle className="h-4 w-4 text-teal-600 dark:text-teal-300" />
-            Examples
+            Ejemplos
           </div>
           <div className="space-y-3">
             {section.examples.map((example) => (

@@ -20,22 +20,22 @@ const tabs = ['Home', 'Theory & Examples', 'Exercises'];
 const summaryCards = [
   {
     title: 'Must',
-    text: 'obligation / prohibition',
+    text: 'obligación / prohibición',
     accent: 'bg-teal-500',
   },
   {
     title: 'Have to',
-    text: 'external necessity',
+    text: 'necesidad externa',
     accent: 'bg-sky-500',
   },
   {
     title: 'Don’t have to',
-    text: 'no necessity',
+    text: 'no es necesario',
     accent: 'bg-amber-500',
   },
   {
     title: 'Should',
-    text: 'advice',
+    text: 'consejo',
     accent: 'bg-rose-500',
   },
 ];
@@ -49,10 +49,11 @@ function Home({ onGoTo }) {
             English Study Portal
           </h1>
           <p className="mt-3 text-balance text-xl font-semibold text-slate-700 dark:text-slate-200">
-            Modal Verbs & Vocabulary
+            Verbos modales y vocabulario
           </p>
           <p className="mt-5 max-w-xl text-base leading-8 text-slate-600 dark:text-slate-300">
-            Study the main modal verbs, compare tricky meanings, and practice one sentence at a time with instant feedback.
+            Estudia paso a paso los verbos modales, el vocabulario y las nuevas expresiones de Unit 2. La idea es que
+            puedas leer mejor, entender a qué se refieren los pronombres y practicar sin apuro.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             <button
@@ -60,7 +61,7 @@ function Home({ onGoTo }) {
               onClick={() => onGoTo('Exercises')}
               className="inline-flex min-h-11 items-center gap-2 rounded-lg bg-teal-600 px-5 py-2 text-sm font-bold text-white shadow-lg shadow-teal-900/15 transition hover:-translate-y-0.5 hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 dark:bg-teal-400 dark:text-slate-950 dark:hover:bg-teal-300 dark:focus:ring-offset-slate-950"
             >
-              Practice
+              Practicar
               <ArrowRight className="h-4 w-4" />
             </button>
             <button
@@ -68,7 +69,7 @@ function Home({ onGoTo }) {
               onClick={() => onGoTo('Theory & Examples')}
               className="inline-flex min-h-11 items-center gap-2 rounded-lg border border-slate-200 bg-white px-5 py-2 text-sm font-bold text-slate-800 transition hover:-translate-y-0.5 hover:border-teal-300 hover:bg-teal-50 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 dark:border-slate-700 dark:bg-slate-950/55 dark:text-slate-100 dark:hover:border-teal-700 dark:hover:bg-slate-900 dark:focus:ring-offset-slate-950"
             >
-              Review theory
+              Repasar teoría
               <BookOpenCheck className="h-4 w-4" />
             </button>
           </div>
@@ -87,15 +88,15 @@ function Home({ onGoTo }) {
         <div className="grid gap-5 lg:grid-cols-[1fr_auto] lg:items-center">
           <div>
             <p className="text-sm font-bold uppercase tracking-[0.14em] text-teal-700 dark:text-teal-300">
-              New study · Unit 2
+              Nuevo estudio · Unit 2
             </p>
-            <h2 className="mt-2 text-2xl font-black text-slate-950 dark:text-white">Pronouns, habits & goals</h2>
+            <h2 className="mt-2 text-2xl font-black text-slate-950 dark:text-white">Pronombres, hábitos y metas</h2>
             <p className="mt-3 max-w-3xl leading-7 text-slate-700 dark:text-slate-300">
-              Learn pronoun reference, can/could/should, natural habit collocations, and a focused strategy for main
-              ideas and supporting details.
+              En esta unidad aprenderás a reconocer pronombres, entender la idea principal de una lectura y usar
+              expresiones naturales sobre hábitos, metas y rutinas saludables.
             </p>
             <div className="mt-4 flex flex-wrap gap-2">
-              {['Reading & pronouns', 'Expanded vocabulary', 'New exercises'].map((item) => (
+              {['Lectura y pronombres', 'Vocabulario ampliado', 'Ejercicios nuevos'].map((item) => (
                 <span
                   key={item}
                   className="rounded-lg bg-white px-3 py-2 text-sm font-bold text-teal-900 dark:bg-slate-950/60 dark:text-teal-100"
@@ -110,7 +111,7 @@ function Home({ onGoTo }) {
             onClick={() => onGoTo('Theory & Examples', 'unit-2')}
             className="inline-flex min-h-11 items-center justify-center gap-2 rounded-lg bg-teal-600 px-5 py-2 text-sm font-bold text-white shadow-lg shadow-teal-900/15 transition hover:-translate-y-0.5 hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 dark:bg-teal-400 dark:text-slate-950 dark:hover:bg-teal-300 dark:focus:ring-offset-slate-950"
           >
-            Open Unit 2
+            Abrir Unit 2
             <ArrowRight className="h-4 w-4" />
           </button>
         </div>
@@ -135,9 +136,10 @@ function Home({ onGoTo }) {
         <div className="flex gap-3">
           <AlertTriangle className="mt-1 h-5 w-5 shrink-0 text-amber-700 dark:text-amber-300" />
           <div>
-            <h2 className="text-lg font-black text-amber-950 dark:text-amber-100">Important reminder</h2>
+            <h2 className="text-lg font-black text-amber-950 dark:text-amber-100">Recordatorio importante</h2>
             <p className="mt-2 leading-7 text-amber-950 dark:text-amber-100">
-              Mustn’t does not mean don’t have to. Mustn’t means prohibition. Don’t have to means no necessity.
+              Mustn’t no significa don’t have to. Mustn’t indica prohibición. Don’t have to indica que algo no es
+              necesario.
             </p>
           </div>
         </div>
@@ -150,7 +152,7 @@ function Theory({ selectedCollection, onSelectCollection }) {
   return (
     <div id="theory" className="space-y-5">
       <div className="max-w-3xl">
-        <h2 className="text-3xl font-black text-slate-950 dark:text-white">Theory & Examples</h2>
+        <h2 className="text-3xl font-black text-slate-950 dark:text-white">Teoría y ejemplos</h2>
       </div>
       <StudyCollectionPicker collections={theoryCollections} selectedId={selectedCollection} onSelect={onSelectCollection} />
 
@@ -176,9 +178,9 @@ function Exercises({ selectedCollection, onSelectCollection }) {
         <div className="mb-3 flex h-11 w-11 items-center justify-center rounded-lg bg-teal-100 text-teal-700 dark:bg-teal-950 dark:text-teal-200">
           <Brain className="h-5 w-5" />
         </div>
-        <h2 className="text-3xl font-black text-slate-950 dark:text-white">Exercises</h2>
+        <h2 className="text-3xl font-black text-slate-950 dark:text-white">Ejercicios</h2>
         <p className="mt-3 leading-7 text-slate-600 dark:text-slate-300">
-          Read each sentence and choose the correct option. Then click Check to see your result.
+          Lee cada oración, elige una opción y revisa tu respuesta. Puedes practicar una tarjeta a la vez.
         </p>
       </div>
 
@@ -197,7 +199,8 @@ function Exercises({ selectedCollection, onSelectCollection }) {
         <div className="flex gap-3">
           <ClipboardCheck className="mt-1 h-5 w-5 shrink-0" />
           <p className="leading-7">
-            Each card checks only one answer, so you can practice at your own pace and review explanations immediately.
+            Cada tarjeta revisa solo una respuesta. Así puedes avanzar a tu ritmo y leer la explicación justo después de
+            responder.
           </p>
         </div>
       </section>

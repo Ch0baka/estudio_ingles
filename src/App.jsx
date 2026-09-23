@@ -13,9 +13,11 @@ import { exerciseCollections, exerciseGroups, unitTwoExercises } from './data/ex
 import { theorySections } from './data/theory.js';
 import { theoryCollections } from './data/unit2.js';
 import { vocabulary } from './data/vocabulary.js';
+import Verbs from './components/Verbs.jsx';
+import { unitThreeCollections, unitThreeTheory, unitThreeVocabulary } from './data/unit3.js';
 import heroStudy from './assets/hero-study.png';
 
-const tabs = ['Home', 'Theory & Examples', 'Exercises'];
+const tabs = ['Home', 'Theory & Examples', 'Exercises', 'Verbos'];
 
 const summaryCards = [
   {
@@ -52,7 +54,7 @@ function Home({ onGoTo }) {
             Verbos modales y vocabulario
           </p>
           <p className="mt-5 max-w-xl text-base leading-8 text-slate-600 dark:text-slate-300">
-            Estudia paso a paso los verbos modales, el vocabulario y las nuevas expresiones de Unit 2. La idea es que
+            Estudia paso a paso los verbos modales, el vocabulario y las expresiones de Unit 2 y el pasado con was y were en Unit 3. La idea es que
             puedas leer mejor, entender a qué se refieren los pronombres y practicar sin apuro.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
@@ -154,7 +156,7 @@ function Theory({ selectedCollection, onSelectCollection }) {
       <div className="max-w-3xl">
         <h2 className="text-3xl font-black text-slate-950 dark:text-white">Teoría y ejemplos</h2>
       </div>
-      <StudyCollectionPicker collections={theoryCollections} selectedId={selectedCollection} onSelect={onSelectCollection} />
+      <StudyCollectionPicker collections={[...theoryCollections.slice(0, 2), ...unitThreeCollections, ...theoryCollections.slice(2)]} selectedId={selectedCollection} onSelect={onSelectCollection} />
 
       {selectedCollection === 'modal-verbs' && (
         <div className="grid gap-5">
@@ -166,7 +168,9 @@ function Theory({ selectedCollection, onSelectCollection }) {
 
       {selectedCollection === 'unit-2' && <UnitTwoTheory />}
 
-      {selectedCollection === 'vocabulary-studio' && <VocabularyCards words={vocabulary} />}
+      {unitThreeTheory[selectedCollection] && <div className="space-y-5">{unitThreeTheory[selectedCollection].map((section) => <TheorySection key={section.title} section={section} />)}<VocabularyCards words={unitThreeVocabulary} title="Vocabulario de UNIT 3" /></div>}
+
+      {selectedCollection === 'vocabulary-studio' && <VocabularyCards words={[...vocabulary, ...unitThreeVocabulary]} />}
     </div>
   );
 }
@@ -244,6 +248,7 @@ export default function App() {
         <Theory selectedCollection={activeTheoryCollection} onSelectCollection={setActiveTheoryCollection} />
       );
     }
+    if (activeTab === 'Verbos') return <Verbs />;
     if (activeTab === 'Exercises') {
       return (
         <Exercises selectedCollection={activeExerciseCollection} onSelectCollection={setActiveExerciseCollection} />

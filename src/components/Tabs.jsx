@@ -1,7 +1,8 @@
-import { BookMarked, Dumbbell, Home } from 'lucide-react';
+import { BookMarked, Dumbbell, Home, Languages } from 'lucide-react';
 
 const icons = {
   Home,
+  Verbos: Languages,
   'Theory & Examples': BookMarked,
   Exercises: Dumbbell,
 };
@@ -9,7 +10,7 @@ const icons = {
 export default function Tabs({ tabs, activeTab, onChange }) {
   return (
     <nav className="sticky top-0 z-20 border-y border-white/50 bg-white/70 px-4 py-3 shadow-sm backdrop-blur-xl dark:border-slate-800/80 dark:bg-slate-950/70 sm:px-6 lg:px-8">
-      <div className="mx-auto grid max-w-3xl grid-cols-3 gap-2 rounded-lg bg-slate-100 p-1 dark:bg-slate-900">
+      <div className="mx-auto grid max-w-3xl grid-cols-2 sm:grid-cols-4 gap-2 rounded-lg bg-slate-100 p-1 dark:bg-slate-900">
         {tabs.map((tab) => {
           const Icon = icons[tab];
           const isActive = activeTab === tab;

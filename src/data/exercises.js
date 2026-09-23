@@ -85,6 +85,12 @@ export const exerciseGroups = [
 
 export const exerciseCollections = [
   {
+    id: 'unit-3-practice',
+    title: 'WAS y WERE: el pasado de to be',
+    eyebrow: 'Ejercicios nuevos · UNIT 3',
+    description: '24 preguntas de afirmaciones, negaciones, preguntas, respuestas cortas, vocabulario y lectura.',
+  },
+  {
     id: 'modal-practice',
     title: 'Consejos, reglas y obligación',
     eyebrow: 'Ejercicios anteriores',

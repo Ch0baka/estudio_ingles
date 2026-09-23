@@ -1,7 +1,7 @@
 import { ArrowLeft, ArrowRight, CheckCircle2, RotateCcw, XCircle } from 'lucide-react';
 import { useMemo, useState } from 'react';
 
-export default function GuidedExerciseSet({ exercises }) {
+export default function GuidedExerciseSet({ exercises, title = 'Pronombres, combinaciones y lectura' }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [answers, setAnswers] = useState({});
 
@@ -32,7 +32,7 @@ export default function GuidedExerciseSet({ exercises }) {
             Pregunta {currentIndex + 1} de {exercises.length}
           </p>
           <h2 className="mt-2 text-2xl font-black text-slate-950 dark:text-white">
-            Pronombres, combinaciones y lectura
+            {title}
           </h2>
         </div>
         <div className="rounded-lg bg-slate-100 px-4 py-3 text-sm font-bold text-slate-700 dark:bg-slate-950/70 dark:text-slate-200">

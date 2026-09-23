@@ -13,6 +13,7 @@ import { exerciseCollections, exerciseGroups, unitTwoExercises } from './data/ex
 import { theorySections } from './data/theory.js';
 import { theoryCollections } from './data/unit2.js';
 import { vocabulary } from './data/vocabulary.js';
+import { unitThreeExercises } from './data/unit3Exercises.js';
 import Verbs from './components/Verbs.jsx';
 import { unitThreeCollections, unitThreeTheory, unitThreeVocabulary } from './data/unit3.js';
 import heroStudy from './assets/hero-study.png';
@@ -197,7 +198,9 @@ function Exercises({ selectedCollection, onSelectCollection }) {
       {selectedCollection === 'modal-practice' &&
         exerciseGroups.map((group) => <ExerciseSection key={group.title} group={group} />)}
 
-      {selectedCollection === 'unit-2-practice' && <GuidedExerciseSet exercises={unitTwoExercises} />}
+      {selectedCollection === 'unit-3-practice' && <GuidedExerciseSet key="unit-3" exercises={unitThreeExercises} title="UNIT 3 · WAS y WERE" />}
+
+      {selectedCollection === 'unit-2-practice' && <GuidedExerciseSet key="unit-2" exercises={unitTwoExercises} />}
 
       <section className="rounded-lg border border-teal-200 bg-teal-50 p-5 text-teal-950 dark:border-teal-900 dark:bg-teal-950/35 dark:text-teal-100">
         <div className="flex gap-3">

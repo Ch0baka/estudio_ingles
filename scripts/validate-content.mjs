@@ -1,3 +1,5 @@
+import { prepGroups, prepVocabulary, readingPassage, listeningTranscript } from '../src/data/testPrep.js';
+import { unitThreeVocabulary } from '../src/data/unit3.js';
 import { unitThreeExercises } from '../src/data/unit3Exercises.js';
 import { exerciseCollections, exerciseGroups, unitTwoExercises } from '../src/data/exercises.js';
 import { theoryCollections } from '../src/data/unit2.js';
@@ -13,6 +15,7 @@ const allExercises = [
   ...exerciseGroups.flatMap((group) => group.exercises),
   ...unitTwoExercises,
   ...unitThreeExercises,
+  ...prepGroups.flatMap((group) => group.exercises),
 ];
 
 const exerciseIds = allExercises.map((exercise) => exercise.id);
@@ -24,9 +27,9 @@ assert(
   'Missing one or more required theory collections.',
 );
 
-assert(exerciseCollections.length === 3, 'Expected exactly three exercise collections.');
+assert(exerciseCollections.length === 4, 'Expected exactly four exercise collections.');
 assert(
-  ['modal-practice', 'unit-2-practice', 'unit-3-practice'].every((id) =>
+  ['modal-practice', 'unit-2-practice', 'unit-3-practice', 'unit-3-test-prep'].every((id) =>
     exerciseCollections.some((collection) => collection.id === id),
   ),
   'Missing one or more required exercise collections.',
@@ -48,11 +51,14 @@ allExercises.forEach((exercise) => {
   assert(exercise.explanation, `Exercise ${exercise.id} needs an explanation.`);
 });
 
-const normalizedTerms = vocabulary.map((word) => word.term.trim().toLowerCase());
+const allVocabulary = [...vocabulary, ...unitThreeVocabulary, ...prepVocabulary];
+assert(readingPassage.length > 500 && listeningTranscript.length > 200, 'Missing reading/listening material.');
+assert(prepGroups.flatMap((group) => group.exercises).length === 26, 'Expected 26 test preparation questions.');
+const normalizedTerms = allVocabulary.map((word) => word.term.trim().toLowerCase());
 const duplicateTerms = normalizedTerms.filter((term, index) => normalizedTerms.indexOf(term) !== index);
 
 assert(duplicateTerms.length === 0, `Duplicate vocabulary terms: ${duplicateTerms.join(', ')}`);
-vocabulary.forEach((word) => {
+allVocabulary.forEach((word) => {
   assert(word.term, 'Vocabulary item missing term.');
   assert(word.translation || word.spanish, `Vocabulary item ${word.term} missing Spanish translation.`);
   assert(word.spanishMeaning, `Vocabulary item ${word.term} missing Spanish definition.`);

@@ -1,3 +1,5 @@
+import TestPreparation from './components/TestPreparation.jsx';
+import { prepVocabulary } from './data/testPrep.js';
 import { AlertTriangle, ArrowRight, BookOpenCheck, Brain, ClipboardCheck } from 'lucide-react';
 import { useEffect, useMemo, useState } from 'react';
 import { colorThemes } from './components/ColorThemeSelect.jsx';
@@ -171,7 +173,7 @@ function Theory({ selectedCollection, onSelectCollection }) {
 
       {unitThreeTheory[selectedCollection] && <div className="space-y-5">{unitThreeTheory[selectedCollection].map((section) => <TheorySection key={section.title} section={section} />)}<VocabularyCards words={unitThreeVocabulary} title="Vocabulario de UNIT 3" /></div>}
 
-      {selectedCollection === 'vocabulary-studio' && <VocabularyCards words={[...vocabulary, ...unitThreeVocabulary]} />}
+      {selectedCollection === 'vocabulary-studio' && <VocabularyCards words={[...vocabulary, ...unitThreeVocabulary, ...prepVocabulary]} />}
     </div>
   );
 }
@@ -197,6 +199,8 @@ function Exercises({ selectedCollection, onSelectCollection }) {
 
       {selectedCollection === 'modal-practice' &&
         exerciseGroups.map((group) => <ExerciseSection key={group.title} group={group} />)}
+
+      {selectedCollection === 'unit-3-test-prep' && <TestPreparation />}
 
       {selectedCollection === 'unit-3-practice' && <GuidedExerciseSet key="unit-3" exercises={unitThreeExercises} title="UNIT 3 · WAS y WERE" />}
 

@@ -85,6 +85,12 @@ export const exerciseGroups = [
 
 export const exerciseCollections = [
   {
+    id: 'unit-3-test-prep',
+    title: 'Preparación para la evaluación',
+    eyebrow: 'UNIT 3 · Test Purposes',
+    description: 'Practica los ocho objetivos: lectura, vocabulario, escritura, pasado simple y listening.',
+  },
+  {
     id: 'unit-3-practice',
     title: 'WAS y WERE: el pasado de to be',
     eyebrow: 'Ejercicios nuevos · UNIT 3',

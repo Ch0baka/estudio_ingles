@@ -6,7 +6,7 @@
 - **URL en Producción (GitHub Pages):** [https://ch0baka.github.io/estudio_ingles/](https://ch0baka.github.io/estudio_ingles/) — **Activa y verificada (HTTP 200)**.
 - **Repositorio Remoto:** [https://github.com/Ch0baka/estudio_ingles.git](https://github.com/Ch0baka/estudio_ingles.git)
 - **Directorio Local:** `/Users/rolando/Codex_proyectos/estudio_ingles_Nicole`
-- **Estado de Sincronización:** **100% Sincronizado**. La rama local `main` coincide de forma idéntica con `origin/main` (commit `f0170e1`), y el bundle compilado en `origin/gh-pages` (`085a18e`) coincide con el build local actual (`index-DUiUKms3.js` y `index-nYlV3baQ.css`).
+- **Estado de Sincronización:** **100% Sincronizado**. La rama local `main` coincide de forma idéntica con `origin/main` (commit `1a1a1b5` y subsecuentes), y el bundle compilado en `origin/gh-pages` (`085a18e`) coincide con el build local actual (`index-DUiUKms3.js` y `index-nYlV3baQ.css`).
 - **Arquitectura:** SPA *Zero-Bloat* construida con **React 18 + Vite 6 + Tailwind CSS**, sin dependencias pesadas de terceros, con soporte de persistencia local en `localStorage` (tema claro/oscuro y paleta de colores de acento).
 - **Módulos y Contenido:**
   - **Unit 1 (Modal Verbs):** Teoría estructurada de modales (*must*, *mustn't*, *have to*, *don't have to*, *should*) y 10 ejercicios interactivos guiados con retroalimentación inmediata.
@@ -71,7 +71,7 @@
 
 | Aspecto | Estado Local | Estado Remoto (`origin`) | Observaciones |
 | :--- | :--- | :--- | :--- |
-| **Rama `main` (Código fuente)** | `f0170e1` | `f0170e1` (`origin/main`) | **Completamente sincronizado** (0 commits de diferencia). |
+| **Rama `main` (Código fuente)** | `1a1a1b5` | `1a1a1b5` (`origin/main`) | **Completamente sincronizado** (0 commits de diferencia). |
 | **Rama `gh-pages` (Despliegue)** | Bundle local idéntico | `085a18e` (`origin/gh-pages`) | Servido en `https://ch0baka.github.io/estudio_ingles/`. |
 | **Hash del Bundle JS** | `index-DUiUKms3.js` | `index-DUiUKms3.js` | Idéntico tanto en `dist/` como en el CDN de GitHub Pages. |
 | **Hash del Bundle CSS** | `index-nYlV3baQ.css` | `index-nYlV3baQ.css` | Idéntico tanto en `dist/` como en el CDN de GitHub Pages. |
